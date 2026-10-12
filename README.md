@@ -24,6 +24,11 @@ Surya's source is private. Happy to walk through the architecture.
 
 A career operating system for NZ students and early-career professionals: an AI career copilot, CV scoring, a planner and an opportunities feed that all update each other. Built with Next.js, Firebase and GPT-4o, with a weekly pipeline that pulls in 800+ opportunities from 7 sources. Live from 2025 to 2026.
 
+## Other projects
+
+- **Hiko** · technical co-founder of a hiking planner for New Zealand's tracks, huts and campsites. I built the Department of Conservation API pipeline (pagination, retries, backoff and rate limiting) into Firestore with scheduled Cloud Functions, plus an Expo mobile app. [Repo](https://github.com/KrishantM/Hikodev)
+- **CreatorHQ** · direct-to-fan hub apps for fitness creators: memberships, challenges and leaderboards, a community feed and a store hand-off. Built as pitch demos with Next.js, Supabase, Stripe, the Shopify Storefront API and the YouTube Data API.
+
 ## Day job
 
 Associate Solution Architect at PwC New Zealand (Digital Strategy & Architecture). I work on agentic engineering, context engineering and cloud architecture for enterprise clients, building and rolling out AI agents and reusable AI skills.
