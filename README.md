@@ -18,6 +18,14 @@ What I've built so far:
 
 Surya's source is private. Happy to walk through the architecture.
 
+## Project Eval (in development)
+
+**Does your AI agent actually help? Project Eval measures it.**
+
+Project Eval is a self-hosted platform that evaluates AI agents and measures their impact. It tracks what people actually do with an agent's output, grades quality with an LLM judge calibrated against human review, and compares the same work with and without AI. It's built on LangChain and LangGraph, with a containerised Kubernetes infrastructure so it can run inside a company's own environment.
+
+Project Eval's source is private while it's in development.
+
 ## Gradual (my previous startup)
 
 **[gradual.co.nz](https://www.gradual.co.nz)** · [repo](https://github.com/KrishantM/Gradual)
@@ -35,7 +43,7 @@ Associate Solution Architect at PwC New Zealand (Digital Strategy & Architecture
 
 ## Tools I work with
 
-Python · TypeScript · SQL · Claude Agent SDK · MCP · RAG and vector databases · Azure · AWS · Terraform · Databricks · Cloudflare Workers · Next.js · Firebase · Claude Code · Cursor · GitHub Copilot
+Python · TypeScript · SQL · Claude Agent SDK · MCP · RAG and vector databases · LangChain · LangGraph · Docker · Kubernetes · Azure · AWS · Terraform · Databricks · Cloudflare Workers · Next.js · Firebase · Claude Code · Cursor · GitHub Copilot
 
 **Certifications:** AWS Certified Solutions Architect – Associate · Azure Databricks Platform Architect · Microsoft Azure Fundamentals
 
