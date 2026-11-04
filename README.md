@@ -2,11 +2,23 @@
 
 AI engineer and solution architect based in Auckland, New Zealand. I build agentic systems for enterprise clients during the day, and AI products of my own outside of it.
 
-## Surya (what I'm building now)
+## Project Eval (open source)
+
+**[krishantm.github.io/project-eval](https://krishantm.github.io/project-eval)** · [repo](https://github.com/KrishantM/project-eval)
+
+Does your AI agent actually help? Project Eval measures it: tasks done, time spent by the agent and by you, cost, how often its work is kept or fixed, and quality scored by an LLM judge that is checked against blind human review. Every number says whether it was measured, inferred or estimated.
+
+- **In the browser.** Drop in Claude Code or Codex session logs, or a CSV of agent inputs and outputs, and get a report. Parsed on your machine, nothing uploaded.
+- **Self-hosted.** A FastAPI server that takes OpenTelemetry from Claude Code with no code change, imports past sessions and grades them in a LangGraph flow with a local judge. Postgres and Redis Streams underneath.
+- **For a team.** A Helm chart for Kubernetes, with workers that scale on the grading backlog (KEDA) and a network policy that keeps data inside the cluster.
+
+Released under Apache-2.0 in November 2026.
+
+## Surya
 
 **[trysurya.com](https://trysurya.com)**
 
-Surya is an AI operator for non-technical founders. You bring the idea and the judgement; Surya does the work. It pressure-tests the idea, builds and ships the software, runs the outreach and operates what it built, checking with you before every step that matters.
+Surya is an AI operator for non-technical founders. You bring the idea and the judgement, and Surya does the work. It pressure-tests the idea, builds and ships the software, runs the outreach and operates what it built, checking with you before every step that matters.
 
 What I've built so far:
 
@@ -17,14 +29,6 @@ What I've built so far:
 - **An outbound-only relay on Cloudflare Workers and Durable Objects**, so a browser anywhere can reach the agent on a user's own machine without opening their network.
 
 Surya's source is private. Happy to walk through the architecture.
-
-## Project Eval (in development)
-
-**Does your AI agent actually help? Project Eval measures it.**
-
-Project Eval is a self-hosted platform that evaluates AI agents and measures their impact. It tracks what people actually do with an agent's output, grades quality with an LLM judge calibrated against human review, and compares the same work with and without AI. It's built on LangChain and LangGraph, with a containerised Kubernetes infrastructure so it can run inside a company's own environment.
-
-Project Eval's source is private while it's in development.
 
 ## Gradual (my previous startup)
 
