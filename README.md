@@ -18,12 +18,12 @@ Released under Apache-2.0 in November 2026.
 
 **[github.com/KrishantM/surya-voice](https://github.com/KrishantM/surya-voice)**
 
-A free, local take on VoiceOS for macOS. Hold fn to dictate into any app, or hold fn + control to ask your coding agent and hear the answer. It works with Claude Code, Codex or any command, and with your own memory files.
+A free, local alternative to VoiceOS for macOS, built to plug into the agent and the memory you already use. VoiceOS is a paid subscription with its own agent and cloud speech recognition. Surya Voice sends your question to your own coding agent (Claude Code, Codex or any command) in your project folder, with its instructions, MCP servers and memory, so what you say by voice and what you type in the terminal end up in one memory. Hold fn to dictate into any app, or hold fn + control to ask and hear the answer.
 
+- **Your harness, your memory.** Adapters for Claude Code and Codex, a stdin/stdout contract for any other agent, and an editor for the agent's Markdown memory. Voice turns read and write the same memory files as terminal sessions.
 - **Dictation anywhere.** On-device speech recognition, with fillers and self-corrections cleaned up by rules or a local model, pasted at the cursor.
 - **A spoken agent.** Runs Claude Code headless and streams each step (files read, commands, web results) into a panel in the notch. Replies are spoken a sentence at a time by Kokoro, a text-to-speech model that runs on the Mac.
 - **Voice approvals.** Anything consequential the agent tries waits on a confirmation card you answer by saying yes or no.
-- **Your harness, your memory.** Adapters for Claude Code and Codex, a stdin/stdout contract for any other agent, and an editor for the agent's Markdown memory.
 
 How I made it: I started it in October 2026 as a daily tool for myself and built it by directing Claude Code from Surya. It is a native Swift app of about 6,000 lines, built with `swiftc` and no Xcode project. One audio engine handles the microphone and the voice, with echo cancellation so you can talk over a reply. A small MCP server inside the same binary turns Claude Code's permission prompts into voice approvals. Kokoro runs as a long-lived Python sidecar, and reusing one phonemiser backend took each spoken sentence from about 650 ms to 190 ms. The demo film is HTML rendered to video with HyperFrames.
 
