@@ -29,6 +29,21 @@ How I made it: I started it in October 2026 as a daily tool for myself and built
 
 Released under MIT in November 2026.
 
+## Surya Memory (open source)
+
+**[github.com/KrishantM/surya-memory](https://github.com/KrishantM/surya-memory)**
+
+One memory, in plain Markdown files you own, for Claude Code, Codex and your other AI tools. It syncs across your machines through your own private GitHub repo, with no account to create and no server. You can see what each tool remembered, correct it, and undo anything an AI wrote.
+
+- **One store.** Every project and every tool reads and writes the same folder. Setup shows its plan first, leaves the originals where they are and keeps both versions when two notes clash.
+- **Plugs into your tools.** An MCP server with nine memory tools, run for real with Claude Code and Codex, plus configs for Claude Desktop, Cursor, Windsurf and Gemini CLI.
+- **Nothing is lost.** Each write is one git commit named for the tool that made it, and forgetting moves a note to an archive. When two machines change the same note, both versions are kept. It never writes conflict markers into a note, because AI tools read memory as fact.
+- **An app to check it.** Browse and edit memories, ask them questions through the Claude or Codex you are already signed in to, and see the exact diff of what each tool changed, with undo beside it. It runs as a local page or a native Mac app.
+
+How I made it: I built it to keep my own agent memory in step between a Mac and a Windows PC, directing Claude Code from Surya. It uses the Python standard library and git, and nothing else. The first version came out of a real bug, two hooks racing to sync the same folder, so every sync now takes a lock and an interrupted one is undone and redone on the next run. 94 Python tests cover the store, the MCP server and the app's API, and 36 more simulate two machines sharing a remote. The app only listens on 127.0.0.1, with a token per launch and a strict content security policy, because a memory note is untrusted text.
+
+Released under MIT in November 2026.
+
 ## Surya
 
 **[trysurya.com](https://trysurya.com)**
