@@ -44,6 +44,21 @@ How I made it: I built it to keep my own agent memory in step between a Mac and 
 
 Released under MIT in November 2026.
 
+## Surya Gates (open source)
+
+**[github.com/KrishantM/surya-gates](https://github.com/KrishantM/surya-gates)**
+
+Let your AI agent run without watching it. It still stops before anything you can't undo. Gates sits between an agent and its tools. Reading files and running tests carry on, while a deploy, a `git push`, a deleted database or a sent email waits for a person to say yes.
+
+- **Claude Code and Codex.** A Claude Code plugin and a one-command install for Codex CLI, with the same rules and commands in both. It still asks when permissions are bypassed.
+- **Apps on Claude, GPT or both.** One `Gate` reads tool calls from the Anthropic, OpenAI and MCP SDKs and replies in the same format. One set of rules covers every provider, and other languages can send a tool call as JSON.
+- **Trust per session.** You can trust a kind of action, like publishing, until the session ends. Sending messages, moving money, touching credentials and killing processes always ask.
+- **Approve from your phone.** Optional and off by default. Gates sends the question by ntfy, iMessage, Telegram or Twilio SMS. You tap or reply yes, no, trust, or what to do instead.
+
+How I made it: Surya has always stopped for approval before consequential steps, and Gates pulls that out into a tool anyone can install. It uses the Python standard library and nothing else. The hooks fail closed, because Claude Code and Codex let an action through when a hook crashes. An agent can't change its own gates, approve itself in the session, or answer its own text. 211 tests cover the rules, the hooks and every phone channel. Real Claude Code, Codex and Agent SDK sessions were run against a real `git push`.
+
+Released under MIT in November 2026.
+
 ## Surya
 
 **[trysurya.com](https://trysurya.com)**
