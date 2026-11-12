@@ -55,7 +55,22 @@ Let your AI agent run without watching it. It still stops before anything you ca
 - **Trust per session.** You can trust a kind of action, like publishing, until the session ends. Sending messages, moving money, touching credentials and killing processes always ask.
 - **Approve from your phone.** Optional and off by default. Gates sends the question by ntfy, iMessage, Telegram or Twilio SMS. You tap or reply yes, no, trust, or what to do instead.
 
-How I made it: Surya has always stopped for approval before consequential steps, and Gates pulls that out into a tool anyone can install. It uses the Python standard library and nothing else. The hooks fail closed, because Claude Code and Codex let an action through when a hook crashes. An agent can't change its own gates, approve itself in the session, or answer its own text. 211 tests cover the rules, the hooks and every phone channel. Real Claude Code, Codex and Agent SDK sessions were run against a real `git push`.
+How I made it: Surya has always stopped for approval before consequential steps, and Gates pulls that out into a tool anyone can install. It uses the Python standard library and nothing else. The hooks fail closed, because Claude Code and Codex let an action through when a hook crashes. An agent can't change its own gates, approve itself in the session, or answer its own text. 212 tests cover the rules, the hooks and every phone channel. Real Claude Code, Codex and Agent SDK sessions were run against a real `git push`.
+
+Released under MIT in November 2026.
+
+## Surya Distro (open source)
+
+**[github.com/KrishantM/surya-distro](https://github.com/KrishantM/surya-distro)**
+
+A launch kit for open-source repos. It studies which posts are working right now, writes a playbook from that evidence, drafts your launch posts to it, and learns from how your own posts do. It never posts anything.
+
+- **Study what works.** It reads recent public posts from Hacker News, Bluesky and GitHub, plus Reddit and Product Hunt when you add keys. Each post is scored against what its author's size and account age predict, so small accounts that won stand out.
+- **A playbook with evidence.** Rules for each channel, each one citing the posts, numbers, sample size and confidence behind it. Every change waits for your approval in your own terminal.
+- **Drafts held to the playbook.** Show HN, Reddit, X, LinkedIn, Product Hunt and newsletter drafts, checked against each channel's limits and the playbook's rules.
+- **Measure and learn.** It reads each post after an hour, a day and a week, joins that to your GitHub traffic and stars, and writes what it learned into a memory store such as Surya Memory.
+
+How I made it: I needed to launch my own tools, and I didn't want an agent posting for me. The scoring engine is pluggable. It uses a local model through Ollama by default, TypeSafe's Jev decision model if you have a key, or a rule-based fallback that needs nothing. It uses the Python standard library and nothing else. 117 tests fake every network call, and a live run studied 387 real posts to plan Surya Memory's launch.
 
 Released under MIT in November 2026.
 
@@ -63,7 +78,7 @@ Released under MIT in November 2026.
 
 **[trysurya.com](https://trysurya.com)**
 
-Surya is an AI operator for non-technical founders. You bring the idea and the judgement, and Surya does the work. It pressure-tests the idea, builds and ships the software, runs the outreach and operates what it built, checking with you before every step that matters.
+Surya is my AI operator, and it has grown into two parts. The tools above are free and open source, and each one works on its own. **Surya Unite** is the paid product that brings them together in one place: your agents, memory, approvals, launches and voice, running on your own Claude or Codex plan. Unite is in development.
 
 What I've built so far:
 
@@ -73,7 +88,7 @@ What I've built so far:
 - **A Windows installer**, shipped across 8 releases ([downloads](https://github.com/KrishantM/surya-releases)).
 - **An outbound-only relay on Cloudflare Workers and Durable Objects**, so a browser anywhere can reach the agent on a user's own machine without opening their network.
 
-Surya's source is private. Happy to walk through the architecture.
+Surya Unite's source is private. Happy to walk through the architecture.
 
 ## Gradual (my previous startup)
 
